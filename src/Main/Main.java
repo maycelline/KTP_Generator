@@ -5,11 +5,8 @@
  */
 package Main;
 
-/**
- *
- * @author maycelline
- */
-import View.FormScreen;
+
+import View.*;
 public class Main {
     public static void main(String[] args) {
         new FormScreen();
