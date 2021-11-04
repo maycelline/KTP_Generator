@@ -28,6 +28,10 @@ public class Penduduk {
     private String pathTTD;
     private String kotaPembuatan;
     private String tanggalPembuatan;
+
+    public Penduduk(){
+
+    }
   
 
     public Penduduk(String NIK, String Nama, String tempatLahir, String tanggalLahir, String jenisKelamin, String golonganDarah, String alamat, String rtrw, String keldesa, String kecamatan, String agama, String statusPerkawinan, String pekerjaan, String kewarganegaraan, String pathFoto, String pathTTD, String kotaPembuatan,String tanggalPembuatan) {

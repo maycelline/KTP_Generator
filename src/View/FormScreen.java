@@ -1,5 +1,6 @@
 package View;
 
+import Controller.Controller;
 import Model.Penduduk;
 import org.jdatepicker.impl.DateComponentFormatter;
 import org.jdatepicker.impl.JDatePanelImpl;
@@ -576,7 +577,15 @@ public class FormScreen {
                 if (counter >= validationCount) {
                     Penduduk penduduk1 = new Penduduk(nik, nama, tempatLahir, tanggalLahir, jKelamin, goldar, alamat, rtrw, keldesa, kecamatan, agama, statusPerkawinan, pekerjaan, kewarganegaraan, foto, tandatangan, kotaPembuatan, tanggalPembuatan);
 
-                    new KTPScreen(penduduk1);
+                    Controller controller = new Controller();
+
+                    boolean inserted = controller.addNewUser(penduduk1);
+                    if(inserted){
+                        JOptionPane.showMessageDialog(null, "Success Input!");
+                        jf.dispose();
+                        new MainScreen();
+                    }
+//                    new KTPScreen(penduduk1);
 
                 } else {
                     JOptionPane.showMessageDialog(null, "Harap isi semua data");
